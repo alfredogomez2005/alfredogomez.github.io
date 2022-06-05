@@ -6,20 +6,74 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow. When I initially ran the code, it would not cause the buffer to overflow. I could not figure out what the issues were. See code below:
 
-```markdown
-Syntax highlighted code block
+// BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
 
-# Header 1
-## Header 2
-### Header 3
+#include <iomanip>
+#include <iostream>
+#include <string>
 
-- Bulleted
-- List
+int main()
+{
+  std::cout << "Buffer Overflow Example" << std::endl;
 
-1. Numbered
-2. List
+  // TODO: The user can type more than 20 characters and overflow the buffer, resulting in account_number being replaced -
+//  even though it is a constant and the compiler buffer overflow checks are on.
+//  You need to modify this method to prevent buffer overflow without changing the account_number
+//  varaible, and its position in the declaration. It must always be directly before the variable used for input.
+
+  const std::string account_number = "CharlieBrown42";
+  char user_input[20];
+  std::cout << "Enter a value: ";
+
+  //LIMIT SIZE OF VARIABLE INPUT TO PREVENT BUFFER OVERFLOW
+
+  std::cout << "You entered: " << user_input << std::endl;
+  std::cout << "Account Number = " << account_number << std::endl;
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. 
+  
+  *UPDATE*
+
+I figured out what the issue was. The code was missing the line of code to limit the size of the variable. See below:
+  
+// BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+int main()
+{
+  std::cout << "Buffer Overflow Example" << std::endl;
+
+  // TODO: The user can type more than 20 characters and overflow the buffer, resulting in account_number being replaced -
+//  even though it is a constant and the compiler buffer overflow checks are on.
+//  You need to modify this method to prevent buffer overflow without changing the account_number
+//  varaible, and its position in the declaration. It must always be directly before the variable used for input.
+
+  const std::string account_number = "CharlieBrown42";
+  char user_input[20];
+  std::cout << "Enter a value: ";
+
+  //LIMIT SIZE OF VARIABLE INPUT TO PREVENT BUFFER OVERFLOW
+  std::cin >> std::setw(20) >> user_input;     //This was the missing line of code. When I ran the debugger before, it would not allow me to input any data.
+
+  std::cout << "You entered: " << user_input << std::endl;
+  std::cout << "Account Number = " << account_number << std::endl;
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+
 
 **Bold** and _Italic_ and `Code` text
 
