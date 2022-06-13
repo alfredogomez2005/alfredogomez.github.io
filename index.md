@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/alfredogomez2005/alfredogo
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Enhancement Aritifact
 
 For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow. When I initially ran the code, it would not cause the buffer to overflow. I could not figure out what the issues were. See code below:
 
