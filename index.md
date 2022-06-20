@@ -4,13 +4,13 @@ You can use the [editor on GitHub](https://github.com/alfredogomez2005/alfredogo
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Enhancement Aritifact
+# Enhancement Aritifact
 
 For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow. When I initially ran the code, it would not cause the buffer to overflow. I could not figure out what the issues were. See code below:
 
 // BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
+```
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -24,9 +24,7 @@ int main()
 //  You need to modify this method to prevent buffer overflow without changing the account_number
 //  varaible, and its position in the declaration. It must always be directly before the variable used for input.
 
-  const std::string account_number = "CharlieBrown42";
-  char user_input[20];
-  std::cout << "Enter a value: ";
+
 
   //LIMIT SIZE OF VARIABLE INPUT TO PREVENT BUFFER OVERFLOW
 
@@ -41,13 +39,13 @@ int main()
 
 As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. 
   
-  *UPDATE*
+**UPDATE
 
-I figured out what the issue was. The code was missing the line of code to limit the size of the variable. See below:
+I figured out how to get the buffer to overlow. See below:
   
 // BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
+```
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -56,10 +54,8 @@ int main()
 {
   std::cout << "Buffer Overflow Example" << std::endl;
 
-  // TODO: The user can type more than 20 characters and overflow the buffer, resulting in account_number being replaced -
+  // The user can type more than 20 characters and overflow the buffer, resulting in account_number being replaced -
 //  even though it is a constant and the compiler buffer overflow checks are on.
-//  You need to modify this method to prevent buffer overflow without changing the account_number
-//  varaible, and its position in the declaration. It must always be directly before the variable used for input.
 
   const std::string account_number = "CharlieBrown42";
   char user_input[20];
@@ -87,7 +83,7 @@ For my enhancement in Category Two: Algorithms and Data Structures, I chose to w
 // Copyright   : Copyright © 2017 SNHU COCE
 // Description : Lab 1-3 Up to Speed in C++
 //============================================================================
-
+```
 #include <algorithm>
 #include <iostream>
 
@@ -196,7 +192,7 @@ int main() {
   
 As you can see, it wants me to figure out what the type and variable will be to execute the code correctly. So my enhancement of the code is to figure out they type and variable, and execute the output.
   
-*UPDATE*
+**UPDATE
 
 After much typing and troubleshooting, I was able to figure out a type and variable that would work. I also ran into an issue with getline(). In order to fix the getline() issue, I had to add #include <string>. See code below:
   
@@ -207,7 +203,7 @@ After much typing and troubleshooting, I was able to figure out a type and varia
 // Copyright   : Copyright © 2017 SNHU COCE
 // Description : Lab 1-3 Up to Speed in C++
 //============================================================================
-
+```
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -218,7 +214,7 @@ using namespace std;
 // Global definitions visible to all methods and classes
 //============================================================================
 double strToDouble(string str, char ch);
-// FIXME (1): Define a data structure to hold bid information together as a single unit of storage.
+// Define a data structure to hold bid information together as a single unit of storage.
 struct Bid {
     string Title;
     string Fund;
@@ -226,7 +222,7 @@ struct Bid {
     double amount;
 };
 
-// FIXME (4): Display the bid values passed in data structure
+// Display the bid values passed in data structure
 /**
  * Display the bid information
  *
@@ -241,7 +237,7 @@ void displayBid(Bid bid) {
     return;
 }
 
-// FIXME (3): Store input values in data structure
+// Store input values in data structure
 /**
  * Prompt user for bid information
  *
@@ -289,7 +285,7 @@ double strToDouble(string str, char ch) {
  */
 int main() {
 
-    // FIXME (2): Declare instance of data structure to hold bid information
+    // Declare instance of data structure to hold bid information
     Bid theBid;
 
     // loop to display menu until exit chosen
@@ -302,7 +298,7 @@ int main() {
         cout << "Enter choice: ";
         cin >> choice;
 
-        // FIXME (5): Complete the method calls then test the program
+        // Complete the method calls then test the program
         switch (choice) {
             case 1:
             	theBid = getBid();
