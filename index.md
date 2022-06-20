@@ -38,7 +38,7 @@ int main()
 ``` 
 ![CS 405 Buffer Overflow Debug](https://user-images.githubusercontent.com/79815877/172033460-b2fd6647-3391-4b5b-bf37-496812ecfd58.jpg)
 
-As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. The reason this project was chosen was because when I initially took this course, this was one of the projects that I never completed.
+As you can see, if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. The reason this project was chosen was because when I initially took this course, this was one of the projects that I never completed.
   
 **UPDATE
 
@@ -192,7 +192,7 @@ int main() {
 ``` 
 ![Lab1-3 Debugger](https://user-images.githubusercontent.com/79815877/172033831-b612f5cd-4a0f-4b1a-8053-9cc8a7d45dfb.jpg)
   
-As you can see, it wants me to figure out what the type and variable will be to execute the code correctly. So my enhancement of the code is to figure out the type and variable, and execute the output.
+As you can see, it wants me to figure out what the type and variable will be to execute the code correctly. So my enhancement of the code is to figure out the type and variable, and execute the code. Without proper variables, the code will not execute and the project will be incomplete.
   
 **UPDATE
 
