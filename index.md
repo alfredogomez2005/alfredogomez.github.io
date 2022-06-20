@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 # Enhancement Aritifact
 
-For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow. When I initially ran the code, it would not cause the buffer to overflow. I could not figure out what the issues were. See code below:
+For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow from CS-405. When I initially ran the code, it would not cause the buffer to overflow. It would not really do anything. The code is missing lines of code. I could not figure out what the issues were. See code below:
 ```
 // BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
@@ -36,7 +36,7 @@ int main()
 ``` 
 ![CS 405 Buffer Overflow Debug](https://user-images.githubusercontent.com/79815877/172033460-b2fd6647-3391-4b5b-bf37-496812ecfd58.jpg)
 
-As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. 
+As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. The reason this project was chosen was because when I initially took this course, this was one of the projects that I never completed.
   
 **UPDATE
 
@@ -73,7 +73,7 @@ int main()
 ![CS 405 Buffer Overflow Debug Correction](https://user-images.githubusercontent.com/79815877/172033475-d22cd82c-57e4-4ed5-be5f-1500012e8d84.jpg)
 
 
-For my enhancement in Category Two: Algorithms and Data Structures, I chose to work on a project called Lab 1-3. This specific project creates a menu with 3 different selctions. The code is not finished and I had to figure out what to input as the type and variable. When I intially did the project, I had no idea what they meant by types and variables. See below:
+For my enhancement in Category Two: Algorithms and Data Structures, I chose to work on a project called Lab 1-3 in CS-260. This specific project creates a menu with 3 different selctions. The code is not finished and I have to figure out what to input as the type and variable. When I intially did the project, I had no idea what they meant by types and variables. See below:
 
 ```
 //============================================================================
@@ -317,10 +317,123 @@ int main() {
   
 ![Lab1-3 Code Corrected](https://user-images.githubusercontent.com/79815877/172034167-2aaac81f-2d36-4804-88ad-30e206f0da1e.jpg)
 
+For my enhancement in Category Three: Databases, I chose to work on project 2 in DAD-220. The enhanement for this project is to transfer the database from MySQL to MongoDB. See Below:
+```  
+mysql
+
+use Gomez;
+
+SELECT * FROM Employee;
+
+//PART 2
+
+ALTER TABLE Branches
+  RENAME TO Department;
+  
+//PART 3
+
+INSERT INTO Department
+  VALUES
+    (1, ‘Accounting’),
+    (2, ‘Human Resources’),
+    (3, ‘Information Systems’),
+    (4, ‘Marketing’);
+    
+SELECT * FROM Department;
+
+//PART 4
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 1;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 2;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 3;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 4;
+
+//PART 5
+
+INSERT INTO Employee (Employee_ID, First_Name, Last_Name, Department_ID, Classification, STATUS, Salary)
+VALUES
+(107, 'Richard', 'Sherman', 1, 'Non-Exempt', 'Full-Time', 95000),
+(108, 'Tyler', 'Lockett', 2, 'Non-Exempt', 'Full-Time', 90000),
+(109, 'Sarah', 'Gomez', 1, 'Non-Exempt', 'Full-Time', 95000),
+(110, 'Jake', 'Irish', 3, 'Non-Exempt', 'Full-Time', 85000),
+(111, 'Damon', 'Davis', 4, 'Non-Exempt', 'Full-Time', 75000),
+(112, 'Jamie', 'Irish', 1, 'Non-Exempt', 'Full-Time', 90000),
+(113, 'Justin', 'Culver', 2, 'Non-Exempt', 'Full-Time', 65000),
+(114, 'Jeremy', 'Hart', 3, 'Non-Exempt', 'Full-Time', 55000),
+(115, 'Candace', 'Willis', 4, 'Non-Exempt', 'Full-Time', 75000),
+(116, 'Rachael', 'Milasich', 1, 'Non-Exempt', 'Full-Time', 45000);
+
+SELECT * FROM Employee;
+
+//PART 6
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 1;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 2;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 3;
+
+SELECT Employee.First_Name, Employee.Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 4;
+
+//PART 7
+
+SELECT Department.Department_Name, COUNT(*) AS NUMBER_OF_EMPLOYEES
+FROM Employee INNER JOIN Department on Employee.Department_ID = Department.Department_ID
+GROUP BY Department.Department_Name;
+
+//PART 8
+
+SELECT First_Name, Last_Name, Department.Department_Name
+FROM Employee INNER JOIN Department ON Employee.Department_ID = Department.Department_ID
+WHERE Employee.Department_ID = 3 OR Employee.Department_ID = 2
+INTO outfile'/home/codio/workspace/output/HRandIS-Employees.csv' FIELDS TERMINATED BY ',';
+
+quit
+
+pwd
+
+ls
+
+cd output
+
+ls
+
+cat HRandIS-Employees.csv
+```
+
+![Create CSV File](https://user-images.githubusercontent.com/79815877/174524398-c2f047d7-a231-4d5b-bbdd-14f0645bd058.JPG)
+
+As you can see, I was able to export the table into a .csv file named HRandIS-Employees.csv.
+
+**UPDATE
+  
+After many downloads and brainstorming, I was able to export the .csv file from MySQL to MongoDB. See Below:
+  
+![MySQL to MongoDB](https://user-images.githubusercontent.com/79815877/174524606-9848547c-bc29-4c0b-a62e-9abd6c4d902b.jpg)
+
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+# Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alfredogomez2005/alfredogomez.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
