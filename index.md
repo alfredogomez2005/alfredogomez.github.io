@@ -117,27 +117,27 @@ void displayBid(?type? ?variable?) {
  *
  * @return data structure containing the bid info
  */
-?type? ?variable?() {
-    ?type? ?variable?
+?retval? getBid() {
+    ?type? ?variable?;
 
-    cin.ignore();
     cout << "Enter title: ";
-    getline(cin, ?variable?.Title);
+    cin.ignore();
+    getline(cin, ?variable?);
 
     cout << "Enter fund: ";
-    cin >> ?variable?.Fund;
+    cin >> ?variable?;
 
-    cin.ignore();
     cout << "Enter vehicle: ";
-    getline(cin, ?variable?.Vehicle);
-
     cin.ignore();
+    getline(cin, ?variable?);
+
     cout << "Enter amount: ";
+    cin.ignore();
     string strAmount;
     getline(cin, strAmount);
-    ?variable?.amount = strToDouble(strAmount, '$');
+    ?variable? = strToDouble(strAmount, '$');
 
-    return ?variable?
+    return ?retval?;
 }
 
 /**
@@ -174,12 +174,12 @@ int main() {
 
         // FIXME (5): Complete the method calls then test the program
         switch (choice) {
-        case 1:
-            ?type? ?variable?
-            break;
-        case 2:
-            ;
-            break;
+            case 1:
+            	?variable? = getBid();
+                break;
+            case 2:
+                displayBid(?variable?);
+                break;
         }
     }
 
