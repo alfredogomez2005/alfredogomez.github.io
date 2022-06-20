@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to Alfredo's GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/alfredogomez2005/alfredogomez.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  After much research and late nights, I have successfully completed 3 projects that are enhanced and work properly. When I first started the program with SNHU, I had no idea how to code in C++. After working with the three categories, I feel like I am ready to take on a role as a software engineer. 
+  My project for Category One was to overflow the buffer. If you’d ask me to do this back in 2020, I would not have known what class to add to the code to make it buffer correctly. After much research and troubleshooting, I was able to correct the code and set the specific number of characters to correctly overflow the buffer. The best part is that I was able to upload it to GitHub to have other members of the team verify the project. GitHub is a great program to collaborate with team members. 
+  In Category Two, I had a project that was left unfinished. When I initially received the project, I did not know what values to correctly display a bid menu. Now that I’ve enhanced the code, I can clearly run the code and display the Menu. Data structures and algorithms are key to success and my project will show employers that I understand how to properly set the values, classes, and structs.
+	In Category Three, my enhancement plan was to import data from MySQL to MongoDB. As I search online for software engineering jobs, I realize that MySQL is a sought-after skill. I’ve worked with MySQL but could not figure out how to properly change from one language to another. I think I downloaded like 3 or 4 different programs to try and covert the table from MySQL to MongoDB. Then I finally found MongoDB Compass. It was a free program that allowed me to create a database and import the table from MySQL to MongoDB. Now that I have this knowledge, I feel more comfortable working with both MySQL and MongoDB.
+	All in all, I feel like I still have a lot to learn, but the fundamentals are there. I am confident that I am ready to pursue an entry level position as a software engineer. Having the knowledge to work on databases, secure coding, and troubleshooting is key to my success. And I’m thankful for the courses and instructors who made this possible. I will value the projects and the knowledge that I’ve been given and pay it forward in my future career. Whether it’s working as a project manager or developer, I know that I am capable of reading, writing, and understanding code. It’s just another tool in my toolbelt to present to employers. And I hope they enjoy reading my ePortfolio because that’s all me. I am putting myself out there and hoping that someone gives this new software engineer a chance to grow with their company.
 
 # Enhancement Aritifact
 
@@ -430,7 +432,10 @@ After many downloads and brainstorming, I was able to export the .csv file from 
   
 ![MySQL to MongoDB](https://user-images.githubusercontent.com/79815877/174524606-9848547c-bc29-4c0b-a62e-9abd6c4d902b.jpg)
 
+You can use the [editor on GitHub](https://github.com/alfredogomez2005/alfredogomez.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 # Jekyll Themes
