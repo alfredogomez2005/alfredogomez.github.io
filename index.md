@@ -7,10 +7,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 # Enhancement Aritifact
 
 For my enhancement in Category One: Software Engineering/Design, I chose to work on a project called Buffer Overflow. When I initially ran the code, it would not cause the buffer to overflow. I could not figure out what the issues were. See code below:
-
+```
 // BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-```
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -34,7 +33,7 @@ int main()
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
-  
+``` 
 ![CS 405 Buffer Overflow Debug](https://user-images.githubusercontent.com/79815877/172033460-b2fd6647-3391-4b5b-bf37-496812ecfd58.jpg)
 
 As you can see if you run the code, it does not output correctly. My enhancement for this specific project is to figure out what the solution is and execute the code correctly. Something is either written incorrectly or I'm missing something. 
@@ -42,10 +41,9 @@ As you can see if you run the code, it does not output correctly. My enhancement
 **UPDATE
 
 I figured out how to get the buffer to overlow. See below:
-  
+```
 // BufferOverflow.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-```
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -70,12 +68,14 @@ int main()
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
+```
 
 ![CS 405 Buffer Overflow Debug Correction](https://user-images.githubusercontent.com/79815877/172033475-d22cd82c-57e4-4ed5-be5f-1500012e8d84.jpg)
 
 
 For my enhancement in Category Two: Algorithms and Data Structures, I chose to work on a project called Lab 1-3. This specific project creates a menu with 3 different selctions. The code is not finished and I had to figure out what to input as the type and variable. When I intially did the project, I had no idea what they meant by types and variables. See below:
-  
+
+```
 //============================================================================
 // Name        : Lab1-3.cpp
 // Author      : your name
@@ -83,7 +83,7 @@ For my enhancement in Category Two: Algorithms and Data Structures, I chose to w
 // Copyright   : Copyright © 2017 SNHU COCE
 // Description : Lab 1-3 Up to Speed in C++
 //============================================================================
-```
+
 #include <algorithm>
 #include <iostream>
 
@@ -187,15 +187,15 @@ int main() {
 
     return 0;
 }
-  
+``` 
 ![Lab1-3 Debugger](https://user-images.githubusercontent.com/79815877/172033831-b612f5cd-4a0f-4b1a-8053-9cc8a7d45dfb.jpg)
   
-As you can see, it wants me to figure out what the type and variable will be to execute the code correctly. So my enhancement of the code is to figure out they type and variable, and execute the output.
+As you can see, it wants me to figure out what the type and variable will be to execute the code correctly. So my enhancement of the code is to figure out the type and variable, and execute the output.
   
 **UPDATE
 
 After much typing and troubleshooting, I was able to figure out a type and variable that would work. I also ran into an issue with getline(). In order to fix the getline() issue, I had to add #include <string>. See code below:
-  
+```
 //============================================================================
 // Name        : Lab1-3.cpp
 // Author      : Alfredo Gomez
@@ -203,7 +203,7 @@ After much typing and troubleshooting, I was able to figure out a type and varia
 // Copyright   : Copyright © 2017 SNHU COCE
 // Description : Lab 1-3 Up to Speed in C++
 //============================================================================
-```
+
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -313,6 +313,7 @@ int main() {
 
     return 0;
 }
+```
   
 ![Lab1-3 Code Corrected](https://user-images.githubusercontent.com/79815877/172034167-2aaac81f-2d36-4804-88ad-30e206f0da1e.jpg)
 
